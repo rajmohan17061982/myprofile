@@ -1,0 +1,15 @@
+{
+  "name": "Engineering Portfolio",
+  "role": "CAD & PLM Solution Architect",
+  "headline": "Engineering software, built from the geometry up.",
+  "summary": "Engineering Software Developer and CAD/PLM Solution Architect with 20+ years of experience across CAD customization, geometry algorithms, enterprise PLM architecture, systems integration and AI-driven engineering solutions.",
+  "location": "Germany",
+  "email": "",
+  "linkedin": "",
+  "github": "",
+  "resumePath": "/resume.pdf",
+  "homeSkills": ["CAD software development", "CATIA V5 & CAA", "3DEXPERIENCE", "Geometry algorithms", "PLM architecture", "AI engineering automation", "Full-stack development"] ,
+  "philosophy": "Effective engineering solutions need architectural thinking and practical implementation experience. I explore ideas, prototype them, validate technical feasibility and turn promising concepts into useful engineering solutions.",
+  "careerStages": ["CAD Software Developer", "Senior Engineering Software Developer / Consultant", "PLM Technical Specialist", "Technical Architect", "PLM Solution Architect"],
+  "certifications": ["Project Management Professional (PMP)", "Capgemini Engagement Manager certification"]
+}

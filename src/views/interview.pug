@@ -1,0 +1,53 @@
+extends layout
+
+block content
+  main.presentation#presentation
+    .presentation-controls
+      a.presentation-exit(href="/") ← Exit
+      span.presentation-count#slide-count 01 / 06
+      button.presentation-fullscreen#fullscreen(type="button") Fullscreen ⛶
+    section.slide.active(data-slide="0")
+      p.eyebrow INTERVIEW PRESENTATION / 01
+      h1 Engineering software,<br><span class="blue-text">built from the geometry up.</span>
+      p.slide-lead CAD development · PLM architecture · AI innovation
+      span.slide-corner Germany · #{year}
+    section.slide(data-slide="1")
+      p.eyebrow PROFILE / 02
+      h2 From hands-on CAD development to enterprise solution architecture.
+      p.slide-lead= profile.summary
+      .slide-tags
+        each skill in profile.homeSkills.slice(0, 5)
+          span.tech-tag= skill
+    section.slide(data-slide="2")
+      p.eyebrow CAREER / 03
+      h2 A progression across engineering systems.
+      .presentation-timeline
+        each stage, index in profile.careerStages
+          .presentation-stage
+            span 0#{index + 1}
+            strong= stage
+    section.slide(data-slide="3")
+      p.eyebrow SELECTED WORK / 04
+      h2 Engineering ideas, explored in practice.
+      .presentation-projects
+        each project, index in projects.slice(0, 3)
+          article.presentation-project
+            span 0#{index + 1} / #{project.category}
+            h3= project.title
+            p= project.summary
+    section.slide(data-slide="4")
+      p.eyebrow APPROACH / 05
+      h2 Architecture informed by implementation.
+      p.slide-lead= profile.philosophy
+      .slide-tags
+        span.tech-tag Prototype
+        span.tech-tag Validate
+        span.tech-tag Engineer
+    section.slide(data-slide="5")
+      p.eyebrow THANK YOU / 06
+      h2 Let's solve the next engineering challenge.
+      a.button.button-primary(href="/contact") Get in touch <span aria-hidden="true">↗</span>
+    .presentation-nav
+      button#previous-slide(type="button" aria-label="Previous slide") ←
+      .slide-dots#slide-dots
+      button#next-slide(type="button" aria-label="Next slide") →

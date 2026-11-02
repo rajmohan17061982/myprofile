@@ -1,0 +1,61 @@
+extends layout
+
+block content
+  section.project-hero.wrap
+    a.back-link(href="/projects") ← All projects
+    p.eyebrow= project.category.toUpperCase()
+    h1= project.title
+      span.blue-period .
+    p.page-lead= project.summary
+    .project-tags
+      each tech in project.technologies
+        span.tech-tag= tech
+  section.section.wrap.detail-layout.case-study
+    .detail-main
+      article.content-block
+        p.eyebrow OVERVIEW
+        h2 The challenge behind the work.
+        p= project.overview
+        p= project.challenge
+      article.content-block
+        p.eyebrow APPROACH
+        h2 Architecture & approach
+        ol.approach-list
+          each item, index in project.architecture
+            li
+              span.approach-index 0#{index + 1}
+              span= item
+      article.content-block
+        p.eyebrow CONTRIBUTION
+        h2 Technical contributions
+        ul.contribution-list
+          each item in project.contributions
+            li= item
+      if project.videos && project.videos.length
+        section.video-section(aria-labelledby="video-gallery-title")
+          .video-section-heading
+            p.eyebrow PROJECT DEMONSTRATIONS
+            h2#video-gallery-title Video walkthroughs
+          .video-grid
+            each video in project.videos
+              figure.video-card
+                video(controls preload="metadata" playsinline aria-label=video.title)
+                  source(src=video.src type="video/mp4")
+                  | Your browser does not support HTML video.
+                figcaption
+                  = video.title
+                  span MP4 demonstration
+      article.value-panel
+        p.eyebrow ENGINEERING VALUE
+        p= project.value
+        small= project.confidentiality
+    aside.detail-aside
+      p.eyebrow TECHNOLOGY STACK
+      ul.stack-list
+        each tech in project.technologies
+          li= tech
+      .aside-note
+        span.note-symbol ◈
+        p Engineering work is described at a shareable, high level. No proprietary implementation details are included.
+  section.wrap.next-project
+    a.arrow-link(href="/projects") Explore more projects <span aria-hidden="true">↗</span>

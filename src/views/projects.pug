@@ -1,0 +1,41 @@
+extends layout
+
+block content
+  section.page-hero.wrap
+    p.eyebrow PROJECT INDEX / 09
+    h1 Selected work<span class="blue-period">.</span>
+    p.page-lead A collection of engineering software, CAD automation, enterprise architecture and independent application projects.
+  section.section.wrap.projects-section
+    .filter-bar(role="group" aria-label="Filter projects by category")
+      button.filter-button.active(type="button" data-filter="all" aria-pressed="true") All projects <span>09</span>
+      each category in ['CAD Development', 'CAD & PLM', 'PLM Architecture', 'AI & Automation', 'AI & PLM', 'Software Engineering', 'Full Stack']
+        button.filter-button(type="button" data-filter=category aria-pressed="false")= category
+    .project-grid.all-projects#project-grid
+      each project, index in projects
+        a.project-card.project-list-card(href=`/projects/${project.slug}` data-category=project.category)
+          .card-topline
+            span.card-index PROJECT / #{String(index + 1).padStart(2, '0')}
+            span.card-arrow aria-hidden="true" ↗
+          .project-art(class=`art-${(index % 3) + 1}` aria-hidden="true")
+            if index % 3 === 0
+              .art-node.node-a
+              .art-node.node-b
+              .art-node.node-c
+              .art-link.link-a
+              .art-link.link-b
+              span.art-code AI / CAD
+            else if index % 3 === 1
+              .compare-shape.shape-left
+              .compare-shape.shape-right
+              span.art-code Δ MODEL
+            else
+              .feature-shape
+              span.art-code ENGINEERING
+          span.category-label= project.category
+          h2= project.title
+          p= project.summary
+          span.card-cta View case study <span aria-hidden="true">→</span>
+    .empty-state(hidden) No projects match this category.
+  section.wrap.disclaimer
+    span.disclaimer-icon i
+    p Project descriptions are intentionally high-level. Confidential information, proprietary source code, customer data and unverified outcomes are not included.

@@ -1,0 +1,17 @@
+.video-section{margin:54px 0}.video-section-heading{margin-bottom:20px}.video-section-heading .eyebrow{margin-bottom:8px}.video-section-heading h2{font-size:23px;letter-spacing:-.045em;margin:0}.video-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.video-card{margin:0;min-width:0;border:1px solid var(--line);background:var(--panel)}.video-card video{display:block;width:100%;aspect-ratio:16/9;background:#050a12;object-fit:contain}.video-card figcaption{padding:12px 14px;color:var(--text);font-size:11px;font-weight:600}.video-card figcaption span{display:block;color:var(--muted);font:9px var(--mono);margin-top:5px}@media(max-width:600px){.video-grid{grid-template-columns:1fr}}
+
+/* Readability overrides for project descriptions and supporting interface text. */
+.eyebrow{font-size:11px}
+.project-card p{font-size:13px;line-height:1.75}
+.category-label,.card-index,.card-cta{font-size:11px}
+.filter-button{font-size:12px}
+.project-hero .page-lead,.page-hero .page-lead{font-size:17px;line-height:1.8}
+.content-block p{font-size:15px;line-height:1.85}
+.approach-list li,.contribution-list li{font-size:14px;line-height:1.75}
+.detail-aside .check-list li,.stack-list li{font-size:12px;line-height:1.7}
+.value-panel p:not(.eyebrow){font-size:15px}
+.value-panel small,.video-card figcaption span{font-size:11px;line-height:1.6}
+.video-card figcaption{font-size:14px}
+.footer-links a,.back-top,.footer-bottom{font-size:11px}
+.presentation-project p{font-size:12px;line-height:1.75}
+.presentation-stage strong{font-size:14px}

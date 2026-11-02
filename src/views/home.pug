@@ -1,0 +1,108 @@
+extends layout
+
+block content
+  section.hero.wrap
+    .hero-copy
+      p.eyebrow <span class="status-dot"></span> ENGINEERING SOFTWARE · CAD / PLM · AI
+      h1= profile.headline
+      p.hero-summary= profile.summary
+      .hero-actions
+        a.button.button-primary(href="/projects") Explore selected work <span aria-hidden="true">↗</span>
+        a.text-link(href="/about") More about my approach <span aria-hidden="true">→</span>
+      .hero-stats
+        .stat
+          strong 20<span>+</span>
+          small years in engineering software
+        .stat-divider
+        .stat
+          strong 03
+          small connected disciplines
+    .hero-visual(aria-label="Abstract engineering geometry illustration")
+      .visual-grid
+      .visual-orbit.orbit-one
+      .visual-orbit.orbit-two
+      .visual-core
+        .core-ring
+        span.core-label CAD / PLM
+      span.visual-label.label-top SYSTEMS / 01
+      span.visual-label.label-bottom GEOMETRY → INTELLIGENCE
+      span.axis.axis-x
+      span.axis.axis-y
+      span.axis.axis-z
+      span.coord coord_3d
+  section.capability-strip
+    .wrap.capabilities
+      each skill, index in skills
+        .capability
+          span.capability-number 0#{index + 1}
+          span= skill
+  section.section.wrap
+    .section-heading
+      .section-title
+        p.eyebrow SELECTED WORK
+        h2 Ideas engineered into practice.
+      a.arrow-link(href="/projects") View all projects <span aria-hidden="true">↗</span>
+    .project-grid.featured-grid
+      each project, index in projects
+        a.project-card(href=`/projects/${project.slug}`)
+          .card-topline
+            span.card-index 0#{index + 1} / 03
+            span.card-arrow aria-hidden="true" ↗
+          .project-art(class=`art-${index + 1}` aria-hidden="true")
+            if index === 0
+              .art-node.node-a
+              .art-node.node-b
+              .art-node.node-c
+              .art-link.link-a
+              .art-link.link-b
+              span.art-code JSON → CAA
+            else if index === 1
+              .compare-shape.shape-left
+              .compare-shape.shape-right
+              span.art-code Δ GEOMETRY
+            else
+              .feature-shape
+              span.art-code CATIA / CAA
+          span.category-label= project.category
+          h3= project.title
+          p= project.summary
+          span.card-cta Explore project <span aria-hidden="true">→</span>
+  section.manifesto
+    .wrap.manifesto-inner
+      .manifesto-label
+        p.eyebrow THE ENGINEERING MINDSET
+        span 01 — 04
+      .manifesto-content
+        h2 Architecture that understands the details. Engineering that sees the whole system.
+        p= profile.philosophy
+        a.text-link(href="/about") Read my approach <span aria-hidden="true">→</span>
+  section.section.wrap.home-focus
+    .section-heading
+      .section-title
+        p.eyebrow AT THE INTERSECTION
+        h2 Connected disciplines. One perspective.
+    .focus-grid
+      a.focus-item(href="/cad-development")
+        span.focus-index 01
+        span.focus-icon ◈
+        h3 CAD development
+        p Geometry, custom features and practical engineering automation.
+        span.focus-arrow ↗
+      a.focus-item(href="/3dexperience-plm")
+        span.focus-index 02
+        span.focus-icon ⌘
+        h3 PLM architecture
+        p Enterprise platforms, product structures and systems integration.
+        span.focus-arrow ↗
+      a.focus-item(href="/ai-innovation")
+        span.focus-index 03
+        span.focus-icon ✳
+        h3 AI innovation
+        p Thoughtful experiments connecting language models and native CAD APIs.
+        span.focus-arrow ↗
+  section.cta-band.wrap
+    .cta-copy
+      p.eyebrow NEXT CONVERSATION
+      h2 Solve the hard engineering problem.
+      p Let's talk about engineering software, architecture and what could be built next.
+    a.button.button-light(href="/contact") Get in touch <span aria-hidden="true">↗</span>

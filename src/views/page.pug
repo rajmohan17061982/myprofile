@@ -1,0 +1,51 @@
+extends layout
+
+block content
+  section.page-hero.wrap
+    p.eyebrow= page.eyebrow
+    h1= page.title
+      span.blue-period .
+    p.page-lead= page.lead
+  section.section.wrap.detail-layout
+    .detail-main
+      each section in page.sections
+        article.content-block
+          h2= section.heading
+          p= section.body
+      if page.resume
+        .timeline
+          each stage, index in profile.careerStages
+            .timeline-item
+              span.timeline-index 0#{index + 1}
+              .timeline-marker
+              .timeline-copy
+                h3= stage
+                if index === 0
+                  p Hands-on CAD and engineering software development foundation.
+                else if index === profile.careerStages.length - 1
+                  p Enterprise engineering architecture and technical leadership.
+                else
+                  p Career progression summary — exact role details and dates to be verified against the CV.
+        .resume-note Exact employers, job titles and employment dates should be completed from the verified resume.
+        a.button.button-primary(href=profile.resumePath) Download resume <span aria-hidden="true">↓</span>
+      if page.contact
+        .contact-actions
+          if profile.email
+            a.button.button-primary(href=`mailto:${profile.email}`) Email me <span aria-hidden="true">↗</span>
+          if profile.linkedin
+            a.button.button-outline(href=profile.linkedin target="_blank" rel="noopener noreferrer") LinkedIn <span aria-hidden="true">↗</span>
+          if profile.github
+            a.button.button-outline(href=profile.github target="_blank" rel="noopener noreferrer") GitHub <span aria-hidden="true">↗</span>
+          if !profile.email && !profile.linkedin && !profile.github
+            p.contact-placeholder Contact links have not been added yet. Update the profile content with verified public contact details.
+    aside.detail-aside
+      p.eyebrow= page.listTitle
+      ul.check-list
+        each item in page.list
+          li
+            span.check-icon ↗
+            span= item
+      if slug === 'about'
+        .aside-note
+          span.note-symbol ◈
+          p From hands-on CAD development to enterprise architecture—with practical implementation always in view.

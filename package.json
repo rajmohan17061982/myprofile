@@ -1,0 +1,17 @@
+{
+  "name": "engineering-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Professional CAD, PLM and engineering software portfolio",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test": "node --test"
+  },
+  "engines": { "node": ">=18" },
+  "dependencies": {
+    "express": "^4.21.2",
+    "pug": "^3.0.3"
+  }
+}

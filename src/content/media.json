@@ -1,0 +1,10 @@
+{
+  "ai-cad-geometry": [
+    {"title":"Create document structure","src":"/videos/Create_Document_Structure.mp4"},
+    {"title":"Flange","src":"/videos/FLANGE.mp4"},
+    {"title":"Nut flange","src":"/videos/NUT_Flange.mp4"}
+  ],
+  "generative-ai-plm-integration": [
+    {"title":"Generative AI integration for PLM","src":"/videos/3DX_PLM.mp4"}
+  ]
+}

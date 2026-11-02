@@ -1,0 +1,52 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    meta(name="theme-color" content="#0b1424")
+    meta(name="description" content=description || 'CAD, PLM and engineering software portfolio')
+    meta(property="og:title" content=`${title} — ${profile.name}`)
+    meta(property="og:description" content=description || profile.summary)
+    meta(property="og:type" content="website")
+    title= `${title} — ${profile.name}`
+    link(rel="stylesheet" href="/styles.css")
+    link(rel="stylesheet" href="/media.css")
+    script.
+      try { if (localStorage.getItem('theme') === 'light') document.documentElement.dataset.theme = 'light'; } catch (e) {}
+  body
+    a.skip-link(href="#main") Skip to content
+    header.site-header
+      .header-inner
+        a.brand(href="/" aria-label=`${profile.name} home`)
+          span.brand-mark E
+          span.brand-name Engineering<span> / </span>Portfolio
+        button.mobile-menu(type="button" aria-label="Open navigation" aria-expanded="false")
+          span
+          span
+        nav.primary-nav(aria-label="Main navigation")
+          a(class=currentPath === '/' ? 'active' : '' href="/") Home
+          a(class=currentPath === '/about' ? 'active' : '' href="/about") About
+          a(class=currentPath.startsWith('/projects') ? 'active' : '' href="/projects") Projects
+          a(class=currentPath === '/3dexperience-plm' ? 'active' : '' href="/3dexperience-plm") 3DEXPERIENCE & PLM
+          a(class=currentPath === '/resume' ? 'active' : '' href="/resume") Resume
+          a.nav-contact(href="/contact") Let's talk <span aria-hidden="true">↗</span>
+        button.theme-toggle(type="button" aria-label="Switch to light theme" title="Switch theme")
+          span.theme-icon(aria-hidden="true") ◐
+    main#main
+      block content
+    footer.site-footer
+      .footer-main.wrap
+        .footer-brand
+          a.brand(href="/")
+            span.brand-mark E
+            span.brand-name Engineering<span> / </span>Portfolio
+          p Architecture informed by hands-on engineering.
+        .footer-links
+          a(href="/projects") Selected work
+          a(href="/about") About
+          a(href="/contact") Contact
+        a.back-top(href="#main") Back to top ↑
+      .footer-bottom.wrap
+        span © #{year} #{profile.name}
+        span Designed for engineering minds.
+    script(src="/app.js" defer)
