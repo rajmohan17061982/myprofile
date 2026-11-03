@@ -2,7 +2,7 @@
   "name": "Engineering Portfolio",
   "role": "CAD & PLM Solution Architect",
   "headline": "Engineering software, built from the geometry up.",
-  "summary": "Engineering Software Developer and CAD/PLM Solution Architect with 20+ years of experience across CAD customization, geometry algorithms, enterprise PLM architecture, systems integration and AI-driven engineering solutions.",
+  "summary": "Engineering Software Developer and CAD/PLM Solution Architect with 22+ years of experience across CAD customization, geometry algorithms, enterprise PLM architecture, systems integration and AI-driven engineering solutions.",
   "location": "Germany",
   "email": "",
   "linkedin": "",
@@ -11,5 +11,10 @@
   "homeSkills": ["CAD software development", "CATIA V5 & CAA", "3DEXPERIENCE", "Geometry algorithms", "PLM architecture", "AI engineering automation", "Full-stack development"] ,
   "philosophy": "Effective engineering solutions need architectural thinking and practical implementation experience. I explore ideas, prototype them, validate technical feasibility and turn promising concepts into useful engineering solutions.",
   "careerStages": ["CAD Software Developer", "Senior Engineering Software Developer / Consultant", "PLM Technical Specialist", "Technical Architect", "PLM Solution Architect"],
-  "certifications": ["Project Management Professional (PMP)", "Capgemini Engagement Manager certification"]
+  "careerTimeline": [
+    {"period": "2004 – 2005", "organization": "Master's thesis", "role": "", "summary": "Trained an artificial neural network to predict resultant forces on milling machine geometry, and built an ANN-based geometric junction recognizer classifying 10 junction types from tessellation data."},
+    {"period": "2006 – 2011", "organization": "Geometric Limited / Goodyear, Luxembourg", "role": "", "summary": "Built a tire cross-section meshing pipeline integrating CATIA V5 with the CUBIT hexahedral mesher, and the Quick Stiffness Analysis feature inside CATIA V5."},
+    {"period": "2011 – 2022", "organization": "Technia", "role": "Product Owner, xCompare", "summary": "Led a CATIA-integrated geometry comparison tool, built a CRC engine hashing tessellation and PMI data to flag model changes, and a PDM web viewer serving 3D geometry and annotations to the browser."}
+  ],
+  "certifications": ["Project Management Professional (PMP)", "3DEXPERIENCE Solution Architect certifications", "Capgemini Engagement Manager certification"]
 }

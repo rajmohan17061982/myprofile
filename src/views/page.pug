@@ -14,19 +14,17 @@ block content
           p= section.body
       if page.resume
         .timeline
-          each stage, index in profile.careerStages
+          each entry, index in profile.careerTimeline
             .timeline-item
               span.timeline-index 0#{index + 1}
               .timeline-marker
               .timeline-copy
-                h3= stage
-                if index === 0
-                  p Hands-on CAD and engineering software development foundation.
-                else if index === profile.careerStages.length - 1
-                  p Enterprise engineering architecture and technical leadership.
-                else
-                  p Career progression summary — exact role details and dates to be verified against the CV.
-        .resume-note Exact employers, job titles and employment dates should be completed from the verified resume.
+                h3= entry.organization
+                p
+                  strong= entry.period
+                  if entry.role
+                    |  · #{entry.role}
+                p= entry.summary
         a.button.button-primary(href=profile.resumePath) Download resume <span aria-hidden="true">↓</span>
       if page.contact
         .contact-actions
