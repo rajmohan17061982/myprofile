@@ -26,7 +26,15 @@ app.use((err, req, res, next) => {
 });
 
 if (require.main === module) {
-  app.listen(port, () => console.log(`Portfolio available at http://localhost:${port}`));
+  const { SSL_KEY_FILE, SSL_CERT_FILE } = process.env;
+  if (SSL_KEY_FILE && SSL_CERT_FILE) {
+    const https = require('node:https');
+    const fs = require('node:fs');
+    const options = { key: fs.readFileSync(SSL_KEY_FILE), cert: fs.readFileSync(SSL_CERT_FILE) };
+    https.createServer(options, app).listen(port, () => console.log(`Portfolio available at https://localhost:${port}`));
+  } else {
+    app.listen(port, () => console.log(`Portfolio available at http://localhost:${port}`));
+  }
 }
 
 module.exports = app;
