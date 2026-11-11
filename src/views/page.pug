@@ -25,6 +25,28 @@ block content
                   if entry.role
                     |  · #{entry.role}
                 p= entry.summary
+                if entry.highlights
+                  ul.check-list
+                    each item in entry.highlights
+                      li= item
+        if profile.skillGroups
+          article.content-block
+            h2 Skills and tools
+            each group in profile.skillGroups
+              p
+                strong #{group.name}:
+                |  #{group.items}
+        if profile.education
+          article.content-block
+            h2 Education
+            each item in profile.education
+              p
+                strong= item.period
+                |  · #{item.degree}, #{item.institution}
+        if profile.languages
+          article.content-block
+            h2 Languages
+            p= profile.languages
         a.button.button-primary(href=profile.resumePath) Download resume <span aria-hidden="true">↓</span>
       if page.contact
         .contact-actions

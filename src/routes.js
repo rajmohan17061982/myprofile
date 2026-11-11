@@ -5,7 +5,7 @@ function createRouter(portfolio) {
   const pageSlugs = ['about', 'cad-development', '3dexperience-plm', 'ai-innovation', 'software-projects', 'achievements', 'resume', 'contact'];
 
   router.get('/', (req, res) => res.render('home', {
-    title: 'CAD & PLM Solution Architect', description: portfolio.profile.summary,
+    title: 'Senior Software Developer & CAD/PLM Consultant', description: portfolio.profile.summary,
     projects: portfolio.projects.filter(project => project.featured), skills: portfolio.profile.homeSkills
   }));
   router.get('/projects', (req, res) => res.render('projects', {

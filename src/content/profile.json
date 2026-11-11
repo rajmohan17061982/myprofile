@@ -1,8 +1,8 @@
 {
   "name": "Engineering Portfolio",
-  "role": "CAD & PLM Solution Architect",
+  "role": "Senior Software Developer & CAD/PLM Consultant",
   "headline": "Engineering software, built from the geometry up.",
-  "summary": "Engineering Software Developer and CAD/PLM Solution Architect with 22+ years of experience across CAD customization, geometry algorithms, enterprise PLM architecture, systems integration and AI-driven engineering solutions.",
+  "summary": "PMP-certified Senior Software Developer and CAD/PLM Consultant with 22+ years of experience across CAD customization, geometry algorithms, enterprise PLM architecture, systems integration and AI-driven engineering solutions.",
   "location": "Germany",
   "email": "",
   "linkedin": "",
@@ -10,11 +10,26 @@
   "resumePath": "/resume.pdf",
   "homeSkills": ["CAD software development", "CATIA V5 & CAA", "3DEXPERIENCE", "Geometry algorithms", "PLM architecture", "AI engineering automation", "Full-stack development"] ,
   "philosophy": "Effective engineering solutions need architectural thinking and practical implementation experience. I explore ideas, prototype them, validate technical feasibility and turn promising concepts into useful engineering solutions.",
-  "careerStages": ["CAD Software Developer", "Senior Engineering Software Developer / Consultant", "PLM Technical Specialist", "Technical Architect", "PLM Solution Architect"],
+  "careerStages": ["Software Engineer", "IT Onsite Coordinator", "IT Team Lead", "Senior Application Consultant"],
   "careerTimeline": [
-    {"period": "2004 – 2005", "organization": "Master's thesis", "role": "", "summary": "Trained an artificial neural network to predict resultant forces on milling machine geometry, and built an ANN-based geometric junction recognizer classifying 10 junction types from tessellation data."},
-    {"period": "2006 – 2011", "organization": "Geometric Limited / Goodyear, Luxembourg", "role": "", "summary": "Built a tire cross-section meshing pipeline integrating CATIA V5 with the CUBIT hexahedral mesher, and the Quick Stiffness Analysis feature inside CATIA V5."},
-    {"period": "2011 – 2022", "organization": "Technia", "role": "Product Owner, xCompare", "summary": "Led a CATIA-integrated geometry comparison tool, built a CRC engine hashing tessellation and PMI data to flag model changes, and a PDM web viewer serving 3D geometry and annotations to the browser."}
+    {"period": "2022 – Present", "organization": "Capgemini GmbH, Stuttgart", "role": "Senior Application Consultant", "summary": "Supports end-to-end PLM data flows from 3DEXPERIENCE to external systems (SAP ERP, Mentor Capital, ENOVIA), owns CAD/PLM infrastructure across 7 enterprise environments, and built AI prototypes for natural-language CATIA geometry creation and RAG-based PLM search.", "highlights": ["Technical architecture and deployment of the ITF tool landscape across 7 environments (Integration, E2E, VAL, Train, PROD)", "E2E integration: MBSE (CAMEO) → 3DX → EBOM/MBOM/BOP → ERP via REST services", "3DX-Mentor Capital synchronisation flow (PLM/electrical integration)", "CAA features for 3DEXPERIENCE Cloud 2026x; technical standards defined for the developer team", "DMU collision analysis: 100% performance improvement through parallelisation", "Pre-sales E2E demo environment (EBOM, MBOM, BOP, SOI)"]},
+    {"period": "2011 – 2022", "organization": "Technia GmbH, Karlsruhe", "role": "IT Team Lead", "summary": "Led a cross-functional team of about 10, owned the vision, roadmap and delivery of the xCompare CAD model comparison solution, and built a CRC engine on tessellation and PMI data, pixel-based model comparison and a PDM web viewer.", "highlights": ["Led customer projects for Honda, Boeing, Saab, EDAG and Triumph (teams of 5–10)", "Honda CATIA V5 → 3DEXPERIENCE migration: batch tools and REST APIs for full data synchronisation", "PDM web viewer rendering tessellation data in the browser with Node.js and Three.js", "Boeing AI project: neural network for character recognition in CAD annotations", "Product owner of in-house products xCompare and Remove Invisible", "Built an offshore development centre at Technia India (Pune) with budget and resource responsibility"]},
+    {"period": "2006 – 2011", "organization": "Geometric Limited, Luxembourg (Goodyear Dunlop Tires)", "role": "IT Onsite Coordinator", "summary": "Developed a patented Quick Stiffness Analysis tool and a CUBIT-based tire meshing pipeline in CATIA V5 with CAA C++, plus geometry checker and FEA pre-processing automation tools.", "highlights": ["Patented CATIA CAA feature for fast tire stiffness analysis", "Geometry checker, mesh generation (CUBIT), 360° automation in CATIA V5", "Offshore team coordination (India), Agile/Scrum, specification writing"]},
+    {"period": "2005 – 2006", "organization": "CAD.Pro Technologies Ltd.", "role": "Software Engineer", "summary": "Customized Pro/ENGINEER Wildfire with Pro/TOOLKIT and AutoCAD for manufacturing design and automation workflows.", "highlights": ["Pro/ENGINEER Wildfire customization (Pro/TOOLKIT, C) and AutoCAD (AutoLISP)", "CAD/CAE training"]}
   ],
-  "certifications": ["Project Management Professional (PMP)", "3DEXPERIENCE Solution Architect certifications", "Capgemini Engagement Manager certification"]
+  "skillGroups": [
+    {"name": "Programming", "items": "C, C++, Java, JavaScript, C#"},
+    {"name": "Backend and frameworks", "items": "Node.js, Express.js"},
+    {"name": "Databases", "items": "MySQL, MSSQL, PostgreSQL"},
+    {"name": "Scripting", "items": "Python, Bash/Shell, Batch, PowerShell"},
+    {"name": "CAD/PDM/PLM tools", "items": "CATIA, 3DEXPERIENCE, SolidWorks, ENOVIA VPM V4 and V5, SmarTeam, DELMIA"},
+    {"name": "CAD APIs", "items": "CAA, SolidWorks API, Pro/TOOLKIT"},
+    {"name": "AI", "items": "RAG, development and integration of AI applications"}
+  ],
+  "education": [
+    {"period": "2003 – 2005", "degree": "Master's degree, Computer Integrated Manufacturing", "institution": "Shri G.S. Institute of Technology & Science, Indore, India"},
+    {"period": "1999 – 2003", "degree": "Bachelor's degree, Mechanical Engineering", "institution": "University of Madras, Chennai, India"}
+  ],
+  "languages": "German B1, English C1, Tamil, Hindi and Telugu C1",
+  "certifications": ["Project Management Professional (PMP)", "3DEXPERIENCE Solution Architect certification", "3DEXPERIENCE 3DX on Cloud, Infrastructure Architect and Infrastructure Consultant certifications"]
 }
